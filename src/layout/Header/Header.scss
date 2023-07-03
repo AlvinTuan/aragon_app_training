@@ -62,6 +62,8 @@ $primary: #3164fa;
             left: -20%;
         }
         .banner__logo--purple {
+            width: 270px;
+            height: 240px;
             position: absolute;
             bottom: 15%;
             right: -20%;
@@ -108,6 +110,57 @@ $primary: #3164fa;
                 object-fit: cover;
                 bottom: -74px;
                 right: -3%;
+            }
+        }
+    }
+}
+// mobile
+@media screen and (max-width: 767px) {
+    .nav {
+        width: 100vw;
+        padding: 20px;
+        .logo {
+            transform: translateX(0%);
+            height: 32px;
+            scale: 0.9;
+        }
+        .connect-wallet-btn {
+            span {
+                display: none;
+            }
+        }
+    }
+    .banner {
+        display: block;
+        .banner__content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 100px;
+            h1 {
+                width: 358px;
+                font-size: 43px;
+                text-align: center;
+                line-height: 51px;
+            }
+            h3 {
+                width: 358px;
+                height: 76px;
+            }
+        }
+        .banner__logo {
+            .banner__logo--main {
+                display: none;
+            }
+            .banner__logo--green {
+                top: -340px;
+                left: -100px;
+            }
+            .banner__logo--purple {
+                object-fit: cover;
+                bottom: 15px;
+                right: -6%;
             }
         }
     }

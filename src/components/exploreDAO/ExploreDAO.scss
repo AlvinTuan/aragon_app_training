@@ -143,3 +143,22 @@
         }
     }
 }
+
+@media screen and (max-width: 767px) {
+    .btn {
+        .btn__head {
+            &--title {
+                font-size: 21px;
+                font-weight: 600;
+                line-height: 24px;
+                text-align: left;
+            }
+            &--author {
+                font-size: 11.8px;
+                font-weight: 500;
+                margin-top: 2px;
+                text-align: left;
+            }
+        }
+    }
+}
