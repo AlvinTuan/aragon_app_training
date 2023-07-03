@@ -58,7 +58,6 @@
             font-size: 25px;
             font-weight: 600;
             line-height: 30px;
-
             text-align: left;
         }
         &--author {
@@ -115,5 +114,32 @@
     .loading--show {
         @include loading(16px, 16px, 1.6px);
         margin-top: unset;
+    }
+}
+
+@media screen and (max-width: 985px) {
+    .explore__title {
+        margin-top: -50px;
+    }
+    .explore__show--item {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 24px;
+    }
+    .btn {
+        width: 100%;
+        height: 180px;
+        .btn__foot {
+            p {
+                max-width: 720px;
+            }
+        }
+    }
+    .show_btn {
+        .loading--show {
+            @include loading(10px, 10px, 1px);
+            margin-top: unset;
+        }
     }
 }

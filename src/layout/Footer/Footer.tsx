@@ -13,7 +13,6 @@ const Footer = () => {
                         <li><a href="">Help</a></li>
                     </ul>
                 </div>
-
                 <div className="footer__img">
                     <img src="./greenGradient.3b21314c.svg" alt="" className="footer__img--right" />
                     <img src="./purpleGradient.e35c46bd.svg" alt="" className="footer__img--left" />
