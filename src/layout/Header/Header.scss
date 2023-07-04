@@ -40,8 +40,8 @@ $primary: #3164fa;
     height: 536px;
     position: relative;
     display: flex;
+    column-gap: 250px;
     align-items: center;
-    column-gap: 200px;
     padding-left: 286px;
     overflow: hidden;
     .banner__content {
@@ -78,7 +78,7 @@ $primary: #3164fa;
     }
 }
 
-@media screen and (max-width: 985px) {
+@media screen and (max-width: 1310px) {
     .header__top {
         .nav {
             width: 100%;

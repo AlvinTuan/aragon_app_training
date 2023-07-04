@@ -35,7 +35,7 @@
 .btn {
     border-radius: 12px;
     width: 619px;
-    height: auto;
+    height: 206px;
     background-color: #ffffff;
     padding: 25px;
     font-family: "Manrope", sans-serif;
@@ -120,7 +120,7 @@
     }
 }
 
-@media screen and (max-width: 985px) {
+@media screen and (max-width: 1310px) {
     .explore__title {
         margin-top: -50px;
     }
