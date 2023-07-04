@@ -27,16 +27,19 @@
 .explore__show--item {
     margin-top: 24px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    grid-template-columns: 48.5% 48.5%;
+    gap: 4%;
+    width: 1262px;
+    max-width: 100%;
 }
 .btn {
     border-radius: 12px;
     width: 619px;
-    height: 206px;
+    height: auto;
     background-color: #ffffff;
     padding: 25px;
     font-family: "Manrope", sans-serif;
+    max-width: 100%;
     &:hover {
         border: 1px solid rgb(209, 209, 209);
     }
