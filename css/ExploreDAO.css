@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;600&display=swap");
 .explore__title {
-  margin-top: 72px;
   font-size: 25px;
   font-weight: 700;
   line-height: 30px;
   color: #323f4b;
 }
 
-.loading {
+.loading--item {
   margin-top: 14px;
   width: 50px;
   height: 50px;
@@ -25,8 +24,10 @@
 .explore__show--item {
   margin-top: 24px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  grid-template-columns: 48.5% 48.5%;
+  gap: 4%;
+  width: 1262px;
+  max-width: 100%;
 }
 
 .btn {
@@ -36,6 +37,7 @@
   background-color: #ffffff;
   padding: 25px;
   font-family: "Manrope", sans-serif;
+  max-width: 100%;
 }
 .btn:hover {
   border: 1px solid rgb(209, 209, 209);
@@ -111,4 +113,68 @@
 }
 .show_btn:hover {
   color: #0532c4;
+}
+.show_btn .loading--show {
+  margin-top: 14px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100rem;
+  border: 1.6px solid #003bf5;
+  border-top: 1.6px solid transparent;
+  animation: spin 1s infinite linear;
+  margin-top: unset;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1310px) {
+  .explore__title {
+    margin-top: -50px;
+  }
+  .explore__show--item {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+  }
+  .btn {
+    width: 100%;
+    height: 180px;
+  }
+  .btn .btn__foot p {
+    max-width: 720px;
+  }
+  .show_btn .loading--show {
+    margin-top: 14px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100rem;
+    border: 1px solid #003bf5;
+    border-top: 1px solid transparent;
+    animation: spin 1s infinite linear;
+    margin-top: unset;
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .btn .btn__head--title {
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+  }
+  .btn .btn__head--author {
+    font-size: 11.8px;
+    font-weight: 500;
+    margin-top: 2px;
+    text-align: left;
+  }
 }/*# sourceMappingURL=ExploreDAO.css.map */

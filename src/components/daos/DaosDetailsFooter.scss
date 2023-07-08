@@ -1,0 +1,94 @@
+$hoverColor: #0031ad;
+$primaryColor: #3164fa;
+
+@mixin itemFooter {
+    text-decoration: none;
+    color: #616e7c;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.footer__dashboard {
+    width: 100%;
+    margin-top: 64px;
+    background-color: #ffffff;
+    .footer__menu {
+        width: 1520px;
+        height: 88px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .menu__left {
+            display: flex;
+            align-items: center;
+            column-gap: 32px;
+            img {
+                width: 97px;
+                height: 40px;
+                object-fit: cover;
+            }
+            ul {
+                padding: 0;
+                display: flex;
+                list-style: none;
+                column-gap: 32px;
+                li a {
+                    @include itemFooter();
+                }
+            }
+        }
+        .menu__right {
+            display: flex;
+            align-items: center;
+            column-gap: 32px;
+            ul {
+                padding: 0;
+                display: flex;
+                list-style: none;
+                column-gap: 32px;
+                li a {
+                    @include itemFooter();
+                }
+            }
+            span {
+                color: #616e7c;
+            }
+        }
+    }
+    .footer__description {
+        background-color: aqua;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        column-gap: 9px;
+        color: #ffffff;
+        background-color: $primaryColor;
+        font-size: 12.8px;
+        padding: 4px 0;
+        font-weight: 500;
+        line-height: 19.2px;
+    }
+}
+
+@media screen and (max-width: 1385px) {
+    .footer__dashboard {
+        margin-bottom: 96px;
+        width: 100%;
+        .footer__menu {
+            padding: 40px 0 64px;
+            flex-direction: column;
+            row-gap: 35px;
+            width: 772px;
+            height: 100%;
+            .menu__left {
+                flex-direction: column;
+                row-gap: 35px;
+            }
+            .menu__right {
+                flex-direction: column;
+                row-gap: 35px;
+            }
+        }
+    }
+}

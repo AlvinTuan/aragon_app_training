@@ -1,0 +1,16 @@
+.footer__dashboard {
+  width: 100%;
+  background-color: aqua;
+  height: 115px;
+  margin-top: 64px;
+  transform: translateY(96px);
+}
+.footer__dashboard .footer__menu .menu__left img {
+  width: 97px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.footer__dashboard .footer__menu .menu__left ul {
+  display: flex;
+}/*# sourceMappingURL=DaosDetailsFooter.css.map */

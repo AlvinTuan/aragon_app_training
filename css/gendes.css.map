@@ -1,1 +1,1 @@
-{"version":3,"sources":["../src/components/exploreDAO/gendes/gendes.scss","gendes.css"],"names":[],"mappings":"AAAA;EACI,oBAAA;OAAA,eAAA;EACA,aAAA;ACCJ","file":"gendes.css"}
+{"version":3,"sources":["../src/components/gendes/gendes.scss","gendes.css"],"names":[],"mappings":"AAAA;EACI,oBAAA;OAAA,eAAA;EACA,aAAA;ACCJ","file":"gendes.css"}

@@ -24,7 +24,9 @@ const ExploreDAO = () => {
                 </p>
                 {exploreList.length === 0 ? <div className="loading--item"></div> : <div className="explore__show--item">
                     {exploreList.map(item => (
-                        item.avatar.endsWith("jpeg" || "jpg" || "png") ? <ExploreDAOimg item={item} key={item.id}></ExploreDAOimg> : <ExploreDaoBtn item={item} key={item.id}></ExploreDaoBtn>
+                        item.avatar.endsWith("jpeg" || "jpg" || "png") ?
+                            <ExploreDAOimg item={item} key={item.id}></ExploreDAOimg>
+                            : <ExploreDaoBtn item={item} key={item.id}></ExploreDaoBtn>
                     ))}
                     <button className="show_btn" onClick={() => setClickShow(false)}>
                         <span>Show more</span>

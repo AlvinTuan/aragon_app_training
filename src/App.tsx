@@ -1,14 +1,27 @@
-import Content from './layout/Content/Content'
-import Footer from './layout/Footer/Footer'
-import Header from './layout/Header/Header'
+import { Route, Routes } from 'react-router-dom'
+import HomePage from './pages/homepage/HomePage'
+import DaosDetails from './components/daos/DaosDetails'
+import Dashboard from './components/daos/dashboard/Dashboard'
+import Governance from './components/daos/governance/Governance'
+import Finance from './components/daos/finance/Finance'
+import Community from './components/daos/community/Community'
+import Settings from './components/daos/f-settings/Settings'
 
 function App() {
 
     return (
         <>
-            <Header></Header>
-            <Content></Content>
-            <Footer></Footer>
+            <Routes>
+                <Route path='/' element={<HomePage />}></Route>
+                <Route path='/daos/ethereum/:daoAuthor/' element={<DaosDetails />}>
+                    <Route path='dashboard' element={<Dashboard />}></Route>
+                    <Route path='governance' element={<Governance />}></Route>
+                    <Route path='finance' element={<Finance />}></Route>
+                    <Route path='community' element={<Community />}></Route>
+                    <Route path='settings' element={<Settings />}></Route>
+                </Route>
+
+            </Routes>
         </>
     )
 }
