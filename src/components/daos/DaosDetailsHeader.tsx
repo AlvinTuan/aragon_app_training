@@ -1,10 +1,27 @@
 import useFetch from "~/hooks/useFetch"
 import "./DaosDetailsHeader.scss"
 import { NavLink, useParams } from "react-router-dom";
+import { useState } from "react";
+import { Button, Modal } from 'antd';
+
 
 const DaosDetailsHeader = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const param = useParams()
     const exploreDaosItem = useFetch(param.daoAuthor)
+
+    // modal 
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleOk = () => {
+        setIsModalOpen(false);
+    };
+
+    const handleCancel = () => {
+        setIsModalOpen(false);
+    };
     return (
         <header className="dao__header">
             <div className="dao__top">
@@ -24,12 +41,29 @@ const DaosDetailsHeader = () => {
                     <div className="menu__user">
                         <p className="menu__user--author">{exploreDaosItem?.avatar}</p>
                         <p className="menu__user--title">{exploreDaosItem?.title}</p>
-                        <button className="btn-chevron-down">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="chevron--down">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                            </svg>
+                        <Button type="primary" onClick={showModal} style={{ "backgroundColor": "white", "color": "black", "width": "32px", "height": "32px", "padding": "4px" }}>
+                            <i className="fa-solid fa-chevron-down"></i>
+                        </Button>
+                        <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel} footer={null} >
+                            <div style={{ "backgroundColor": "#fffff", "padding": "20px 64px", "textAlign": "center", "fontSize": "18px", "fontWeight": "700px" }}>Select your DAO</div>
 
-                        </button>
+                            <div style={{ "display": "flex", "alignItems": "center", "justifyContent": "space-between", "padding": "12px", "border": "2px solid #c9d3db", "backgroundColor": "#eeeeee", "borderRadius": "12px" }}>
+                                <div style={{ "display": "flex", "columnGap": "20px", "alignItems": "center" }}>
+                                    <p style={{ "background": "linear-gradient(to right, #003bf5, #002985)", "width": "48px", "height": "48px", "display": "flex", "alignItems": "center", "justifyContent": "center", "borderRadius": "50%", "color": "#fff" }}>{exploreDaosItem?.avatar}</p>
+                                    <div style={{ "display": "flex", "flexDirection": "column" }}>
+                                        <p className="menu__user--title">{exploreDaosItem?.title}</p>
+                                        <p style={{ "color": "#52606d" }}>{exploreDaosItem?.author}</p>
+                                    </div>
+                                </div>
+                                <i className="fa-sharp fa-solid fa-circle-check" style={{ "color": "#0031ad" }}></i>
+                            </div>
+                            <div style={{ "width": "100%" }}>
+                                <a style={{ "display": "block", "marginTop": "12px", "backgroundColor": "#eeeeee", "borderRadius": "12px", "padding": "8px 127px" }}>
+                                    <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span style={{ "color": "#323f4b", "marginLeft": "15px", "fontSize": "17px" }}>Go back to explorer page</span>
+                                </a>
+                            </div>
+                        </Modal>
                     </div>
                     <div className="nav">
                         <ul className="menu">
@@ -79,7 +113,7 @@ const DaosDetailsHeader = () => {
                     </button>
                 </div>
 
-            </div>
+            </div >
         </header >
     )
 }

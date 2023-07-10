@@ -88,6 +88,7 @@ $primaryColor: #3164fa;
                     color: $primaryColor;
                     font-weight: 700;
                     line-height: 24px;
+                    cursor: pointer;    
                     &:hover {
                         color: $hoverColor;
                     }
@@ -163,6 +164,9 @@ $primaryColor: #3164fa;
                         background-color: #e4e7eb;
                         border-radius: 8px;
                         cursor: pointer;
+                    }
+                    .Toastify .Toastify__toast-icon svg {
+                        fill: #52606d;
                     }
                 }
             }

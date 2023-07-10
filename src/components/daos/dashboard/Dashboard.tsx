@@ -2,9 +2,58 @@ import useFetch from "~/hooks/useFetch"
 import "./dashboard.scss"
 import { useParams } from "react-router-dom";
 import Gende from "~/components/gendes/Gende";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useState } from "react";
+import clipboardCopy from "clipboard-copy";
+
 const Dashboard = () => {
     const param = useParams()
     const exploreListItem = useFetch(param.daoAuthor);
+    const notify = () => {
+        if (!clickStar) {
+            toast.success('DAO favorited', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            })
+        } else {
+            toast.success('DAO removed from favorites', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            })
+        }
+    };
+    const [clickStar, setClickStar] = useState(false);
+    const handleClickStar = () => {
+        notify()
+        setClickStar((clickStar) => !clickStar)
+    }
+    const copyToast = () => toast.success('Copied', {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+    });
+    const handleCopy = () => {
+        copyToast()
+        clipboardCopy(`app.aragon.org/#/daos/ethereum/${exploreListItem?.author}`)
+    }
     return (
         <div className="dashboard__container">
             <div className="dashboard__banner">
@@ -12,12 +61,11 @@ const Dashboard = () => {
                     <div className="banner__content">
                         <h1 className="content__title">{exploreListItem?.title}</h1>
                         <p className="content__author">{exploreListItem?.author}</p>
-                        <a className="content__link" href="#">
+                        <a className="content__link" onClick={handleCopy}>
                             <span>
-
                                 {`app.aragon.org/#/daos/ethereum/${exploreListItem?.author}`}
                             </span>
-                            <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><path opacity="0.3" d="M6.49996 12.9999C4.93796 12.9999 3.66663 11.7286 3.66663 10.1666V3.33328H2.49996C1.48863 3.33328 0.666626 4.15528 0.666626 5.16661V14.1666C0.666626 15.1779 1.48863 15.9999 2.49996 15.9999H10.8333C11.8446 15.9999 12.6666 15.1779 12.6666 14.1666V12.9999H6.49996Z" fill="currentColor"></path><path d="M15.3333 1.83333C15.3333 0.820667 14.5126 0 13.5 0H6.49996C5.48729 0 4.66663 0.820667 4.66663 1.83333V10.1667C4.66663 11.1793 5.48729 12 6.49996 12H13.5C14.5126 12 15.3333 11.1793 15.3333 10.1667V1.83333Z" fill="currentColor"></path></svg>
+                            <i className="fa-regular fa-copy"></i>
                         </a>
                         <div className="content__description">
                             <p>
@@ -45,9 +93,13 @@ const Dashboard = () => {
                                 <i className="fa-solid fa-chevron-down"></i>
                             </button>
                             <span className="text__link">We Have Had Enough web</span>
-                            <div className="star">
-                                <svg width="16" height="16" fill="none" viewBox="0 0 16 16"><path d="M15.2236 6.20583L15.2236 6.20584L15.2253 6.21134C15.2543 6.30442 15.2579 6.40517 15.2353 6.50089L15.9651 6.67354L15.2353 6.50089C15.2127 6.5965 15.1658 6.67943 15.1042 6.74193L15.1028 6.74334L12.1736 9.73189L11.9096 10.0012L11.9683 10.3738L12.6427 14.6474L12.6426 14.6474L12.6434 14.6522C12.6597 14.7509 12.6489 14.852 12.6136 14.943C12.5783 15.0337 12.5213 15.1076 12.4533 15.1593C12.3856 15.2107 12.3091 15.2388 12.2328 15.2445C12.1565 15.2503 12.0785 15.2339 12.0069 15.1945L12.0069 15.1944L8.38735 13.2017L8.02712 13.0033L7.6662 13.2004L4.00781 15.198L4.0055 15.1992C3.93387 15.2387 3.8559 15.2551 3.77963 15.2493L3.72331 15.9972L3.77963 15.2493C3.70327 15.2436 3.62676 15.2155 3.5591 15.1641C3.4911 15.1124 3.43407 15.0385 3.3988 14.9477C3.36347 14.8568 3.35273 14.7557 3.36897 14.657L3.3692 14.6555L4.05494 10.4333L4.11537 10.0612L3.85279 9.79067L0.900706 6.74952L0.900715 6.74951L0.897689 6.74643C0.835232 6.68282 0.787753 6.59861 0.764878 6.50165C0.741977 6.40459 0.745631 6.30246 0.775026 6.20806C0.804375 6.11381 0.857026 6.0345 0.922642 5.9768C0.98794 5.91938 1.06359 5.88528 1.14001 5.87382L1.14129 5.87363L5.18597 5.26038L5.57866 5.20084L5.75009 4.84256L7.59087 0.995347C7.63707 0.918044 7.69866 0.857272 7.76755 0.815787C7.84073 0.771727 7.92093 0.75 8.00048 0.75C8.08003 0.75 8.16023 0.771727 8.23341 0.815787C8.30185 0.857 8.36309 0.917248 8.40919 0.993828L10.2055 4.80625L10.3748 5.16546L10.767 5.2274L14.8551 5.87293L14.8551 5.87297L14.8635 5.8742C14.939 5.88525 15.0138 5.91887 15.0784 5.97586C15.1432 6.03315 15.1951 6.11205 15.2236 6.20583Z" stroke="currentColor" strokeWidth="1.5"></path></svg>
-                            </div>
+                            <button className="star" onClick={handleClickStar}>
+                                {!clickStar ?
+                                    <i className="fa-regular fa-star"></i>
+                                    : <i className="fa-solid fa-star"></i>}
+                                <ToastContainer toastStyle={{ color: "#52606d", width: "100%" }}></ToastContainer>
+                            </button>
+
                         </div>
 
                     </div>
