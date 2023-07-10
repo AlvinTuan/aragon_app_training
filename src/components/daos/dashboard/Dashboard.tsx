@@ -5,9 +5,6 @@ import Gende from "~/components/gendes/Gende";
 const Dashboard = () => {
     const param = useParams()
     const exploreListItem = useFetch(param.daoAuthor);
-
-
-
     return (
         <div className="dashboard__container">
             <div className="dashboard__banner">

@@ -8,6 +8,7 @@ const DaosDetailsHeader = () => {
     return (
         <header className="dao__header">
             <div className="dao__top">
+                {/* button menu */}
                 <div className="btn__menu">
                     <input type="checkbox" name="openNav" id="openNav" />
                     <label htmlFor="openNav" className="openNav">
@@ -18,6 +19,7 @@ const DaosDetailsHeader = () => {
                         <span className="nav-text">Menu</span>
                     </label>
                 </div>
+                {/*  */}
                 <div className="dao__top--left">
                     <div className="menu__user">
                         <p className="menu__user--author">{exploreDaosItem?.avatar}</p>
@@ -32,19 +34,36 @@ const DaosDetailsHeader = () => {
                     <div className="nav">
                         <ul className="menu">
                             <li>
-                                <NavLink to={"dashboard"} className={({ isActive }) => isActive ? "selected" : ""}>Dashboard</NavLink>
+                                <NavLink to={"dashboard"} className={({ isActive }) => isActive ? "selected" : ""}>
+                                    <span>
+                                        Dashboard
+                                    </span></NavLink>
                             </li>
                             <li>
-                                <NavLink to={"governance"} className={({ isActive }) => isActive ? "selected" : ""}>Governance</NavLink>
+                                <NavLink to={"governance"} className={({ isActive }) => isActive ? "selected" : ""}>
+                                    <span>Governance</span>
+                                </NavLink>
                             </li>
                             <li>
-                                <NavLink to={"finance"} className={({ isActive }) => isActive ? "selected" : ""} >Finance</NavLink>
+                                <NavLink to={"finance"} className={({ isActive }) => isActive ? "selected" : ""} >
+                                    <span>
+                                        Finance
+                                    </span>
+                                </NavLink>
                             </li>
                             <li>
-                                <NavLink to={"community"} className={({ isActive }) => isActive ? "selected" : ""}>Community</NavLink>
+                                <NavLink to={"community"} className={({ isActive }) => isActive ? "selected" : ""}>
+                                    <span>
+                                        Community
+                                    </span>
+                                </NavLink>
                             </li>
                             <li>
-                                <NavLink to={"settings"} className={({ isActive }) => isActive ? "selected" : ""}>Settings</NavLink>
+                                <NavLink to={"settings"} className={({ isActive }) => isActive ? "selected" : ""}>
+                                    <span>
+                                        Settings
+                                    </span>
+                                </NavLink>
                             </li>
                         </ul>
                     </div>
