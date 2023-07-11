@@ -39,6 +39,17 @@ $primaryColor: #3164fa;
         font-weight: 700;
         line-height: 24px;
         border-radius: 12px;
+        .Toastify {
+            .Toastify__toast-container {
+                width: auto;
+                .Toastify__close-button {
+                    display: none;
+                }
+            }
+            .Toastify__toast-icon svg {
+                fill: #52606d;
+            }
+        }
     }
 }
 

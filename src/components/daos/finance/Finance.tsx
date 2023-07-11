@@ -1,6 +1,7 @@
 import ModalDepositFunds from "~/components/modal/ModalDepositFunds"
 import "../governance/governance.scss"
 import { useState } from "react"
+import { ToastContainer } from "react-toastify"
 const Finance = () => {
     const [showModalDepositFunds, setShowModalDepositFunds] = useState(false)
     return (
@@ -17,9 +18,10 @@ const Finance = () => {
                         <span>
                             Deposit funds
                         </span>
+                        <ToastContainer toastStyle={{ color: "#52606d" }}></ToastContainer>
                     </button>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

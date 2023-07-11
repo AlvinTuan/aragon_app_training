@@ -22,13 +22,13 @@ const ModalDepositFunds: React.FC<ModalProps> = ({ open, handleClose }) => {
     const notify_CP = () => {
         toast.success('Copied', {
             position: "top-center",
-            autoClose: 3000,
+            autoClose: 1000,
             hideProgressBar: true,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
-            progress: 0.1,
-            theme: "dark",
+            progress: undefined,
+            theme: "light",
         });
     }
     if (typeof document === "undefined") return <div className="modal"></div>

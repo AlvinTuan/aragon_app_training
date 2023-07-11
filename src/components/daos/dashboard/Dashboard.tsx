@@ -17,7 +17,7 @@ const Dashboard = () => {
         if (!clickStar) {
             toast.success('DAO favorited', {
                 position: "top-center",
-                autoClose: 2000,
+                autoClose: 1000,
                 hideProgressBar: true,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -28,7 +28,7 @@ const Dashboard = () => {
         } else {
             toast.success('DAO removed from favorites', {
                 position: "top-center",
-                autoClose: 2000,
+                autoClose: 1000,
                 hideProgressBar: true,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -45,7 +45,7 @@ const Dashboard = () => {
     }
     const copyToast = () => toast.success('Copied', {
         position: "top-center",
-        autoClose: 2000,
+        autoClose: 1000,
         hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: true,

@@ -172,8 +172,16 @@ $primaryColor: #3164fa;
                         border-radius: 8px;
                         cursor: pointer;
                     }
-                    .Toastify .Toastify__toast-icon svg {
-                        fill: #52606d;
+                    .Toastify {
+                        .Toastify__toast-container {
+                            width: auto;
+                            .Toastify__close-button {
+                                display: none;
+                            }
+                        }
+                        .Toastify__toast-icon svg {
+                            fill: #52606d;
+                        }
                     }
                 }
             }
