@@ -1,6 +1,10 @@
+import { useState } from "react";
 import "./community.scss"
+import ModalWalletConnection from "~/components/modal/ModalWalletConnection";
 const Community = () => {
-    return (
+    const [showModalWalletConnection, setShowModalWalletConnection] = useState(false);
+    return (<>
+        <ModalWalletConnection open={showModalWalletConnection} handleClose={() => { setShowModalWalletConnection(false) }}></ModalWalletConnection>
         <div className="community__container">
             <div className="member__card">
                 <div className="member__card--right">
@@ -8,7 +12,7 @@ const Community = () => {
                     <span>Wallet-based</span>
                 </div>
                 <div className="member__card--left">
-                    <button className="member__btn">
+                    <button className="member__btn" onClick={() => setShowModalWalletConnection(true)}>
                         <span>Manage memmbers</span>
                     </button>
                 </div>
@@ -26,6 +30,7 @@ const Community = () => {
             </div>
 
         </div>
+    </>
     )
 }
 

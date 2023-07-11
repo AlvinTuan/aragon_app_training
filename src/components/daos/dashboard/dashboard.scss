@@ -49,7 +49,7 @@ $primaryColor: #3164fa;
     width: 1520px;
     max-width: 100%;
     margin: 96px auto 0;
-    padding: 0 129px;
+    padding: 24px 129px 0;
     font-family: "Manrope", sans-serif;
 
     .dashboard__banner {
@@ -88,7 +88,7 @@ $primaryColor: #3164fa;
                     color: $primaryColor;
                     font-weight: 700;
                     line-height: 24px;
-                    cursor: pointer;    
+                    cursor: pointer;
                     &:hover {
                         color: $hoverColor;
                     }
@@ -102,6 +102,9 @@ $primaryColor: #3164fa;
                         -webkit-line-clamp: 2;
                         overflow: hidden;
                         text-overflow: ellipsis;
+                    }
+                    .show-para {
+                        display: block;
                     }
                     a {
                         color: $primaryColor;
@@ -159,6 +162,10 @@ $primaryColor: #3164fa;
                     .btn-all-link {
                         display: none;
                     }
+                    .text__link {
+                        color: $primaryColor;
+                        font-weight: 700;
+                    }
                     .star {
                         padding: 16px;
                         background-color: #e4e7eb;
@@ -180,12 +187,20 @@ $primaryColor: #3164fa;
         column-gap: 24px;
         &--left {
             @include cardButtonDashboard();
+            .card__btn {
+                &:hover {
+                    background-color: $hoverColor;
+                }
+            }
         }
         &--right {
             @include cardButtonDashboard();
             .card__btn {
                 background-color: #e4e7eb;
-                color: #7c858c;
+                color: #323f4b;
+                &:hover {
+                    background-color: #c1cad1;
+                }
             }
         }
     }
@@ -228,7 +243,6 @@ $primaryColor: #3164fa;
                 p {
                     color: #323f4b;
                     font-weight: 700;
-
                     font-size: 30px;
                 }
                 span {
@@ -251,26 +265,31 @@ $primaryColor: #3164fa;
                 justify-content: space-between;
                 .address {
                     color: #616e7c;
-                    &:hover {
-                        color: $hoverColor;
-                    }
                 }
                 &:hover {
                     color: $hoverColor;
+                    .address {
+                        color: $hoverColor;
+                    }
                 }
             }
             .dbr--btn {
                 margin-top: 16px;
                 background-color: #ffffff;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
+
                 width: 111px;
                 height: 48px;
                 padding: 16px;
                 border-radius: 12px;
                 color: #616e7c;
                 font-weight: 700;
+                a {
+                    display: flex;
+                    column-gap: 6px;
+                    align-items: center;
+                    text-decoration: none;
+                    color: $primaryColor;
+                }
                 &:hover {
                     color: #323f4b;
                     background-color: #e4e7eb;

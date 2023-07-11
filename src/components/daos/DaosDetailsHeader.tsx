@@ -47,7 +47,7 @@ const DaosDetailsHeader = () => {
                         <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel} footer={null} >
                             <div style={{ "backgroundColor": "#fffff", "padding": "20px 64px", "textAlign": "center", "fontSize": "18px", "fontWeight": "700px" }}>Select your DAO</div>
 
-                            <div style={{ "display": "flex", "alignItems": "center", "justifyContent": "space-between", "padding": "12px", "border": "2px solid #c9d3db", "backgroundColor": "#eeeeee", "borderRadius": "12px" }}>
+                            <div style={{ "display": "flex", "alignItems": "center", "justifyContent": "space-between", "padding": "12px", "border": "2px solid #c9d3db", "backgroundColor": "#eeeeee", "borderRadius": "12px", "cursor": "pointer" }}>
                                 <div style={{ "display": "flex", "columnGap": "20px", "alignItems": "center" }}>
                                     <p style={{ "background": "linear-gradient(to right, #003bf5, #002985)", "width": "48px", "height": "48px", "display": "flex", "alignItems": "center", "justifyContent": "center", "borderRadius": "50%", "color": "#fff" }}>{exploreDaosItem?.avatar}</p>
                                     <div style={{ "display": "flex", "flexDirection": "column" }}>
@@ -58,7 +58,7 @@ const DaosDetailsHeader = () => {
                                 <i className="fa-sharp fa-solid fa-circle-check" style={{ "color": "#0031ad" }}></i>
                             </div>
                             <div style={{ "width": "100%" }}>
-                                <a style={{ "display": "block", "marginTop": "12px", "backgroundColor": "#eeeeee", "borderRadius": "12px", "padding": "8px 127px" }}>
+                                <a href="/" style={{ "display": "block", "marginTop": "12px", "backgroundColor": "#eeeeee", "borderRadius": "12px", "padding": "8px 127px" }}>
                                     <i className="fa-solid fa-arrow-up-right-from-square"></i>
                                     <span style={{ "color": "#323f4b", "marginLeft": "15px", "fontSize": "17px" }}>Go back to explorer page</span>
                                 </a>

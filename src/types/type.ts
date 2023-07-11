@@ -6,3 +6,8 @@ export interface ExploreItem {
     desc: string;
     gendes: { id: number; item: string }[];
 }
+
+export interface ModalProps {
+    open: boolean;
+    handleClose: () => void;
+}
