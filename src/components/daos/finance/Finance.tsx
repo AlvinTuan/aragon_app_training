@@ -11,10 +11,10 @@ const Finance = () => {
             <div className='ele__container'>
                 <div className="ele__finance--box">
                     <div className="box__top">
-                        <div className="icon-finance">
+                        <div className="box__top--icon">
                             <i className="fa-solid fa-coins"></i>
                         </div>
-                        <span>Finance</span>
+                        <span className="box__top--text">Finance</span>
                     </div>
                     <div className="box__bottom">
                         <div className="finance">

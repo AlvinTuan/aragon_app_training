@@ -7,14 +7,20 @@ const Community = () => {
         <ModalWalletConnection open={showModalWalletConnection} handleClose={() => { setShowModalWalletConnection(false) }}></ModalWalletConnection>
         <div className="community__container">
             <div className="member__card">
-                <div className="member__card--right">
-                    <h2>1 Members</h2>
-                    <span>Wallet-based</span>
+                <div className="member__card--top">
+                    <i className="fa-solid fa-people-group"></i>
+                    <span>Community</span>
                 </div>
-                <div className="member__card--left">
-                    <button className="member__btn" onClick={() => setShowModalWalletConnection(true)}>
-                        <span>Manage memmbers</span>
-                    </button>
+                <div className="member__card--bottom">
+                    <div className="bottom__right">
+                        <h2>1 Members</h2>
+                        <span>Wallet-based</span>
+                    </div>
+                    <div className="bottom__left">
+                        <button className="member__btn" onClick={() => setShowModalWalletConnection(true)}>
+                            <span>Manage memmbers</span>
+                        </button>
+                    </div>
                 </div>
 
             </div>

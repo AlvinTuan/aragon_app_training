@@ -14,37 +14,42 @@ $primaryColor: #3164fa;
         width: 1259px;
         max-width: 100%;
         padding: 41px;
-        display: flex;
-        justify-content: space-between;
-        &--right {
-            width: 80%;
-            line-height: 24px;
-            h2 {
-                color: #323f4b;
-                font-weight: 700;
-                font-size: 39.0625px;
-                line-height: 46.875px;
-            }
-            span {
-                display: inline-block;
-                margin-top: 16px;
-                font-size: 20px;
-                line-height: 30px;
-                font-weight: 500;
-                color: #52606d;
-            }
+        &--top {
+            display: none;
         }
-        &--left {
-            .member__btn {
-                background-color: $primaryColor;
-                color: #ffffff;
-                padding: 12px 16px;
-                font-weight: 500;
+        &--bottom {
+            display: flex;
+            justify-content: space-between;
+            .bottom__right {
+                width: 80%;
                 line-height: 24px;
-                border-radius: 12px;
+                h2 {
+                    color: #323f4b;
+                    font-weight: 700;
+                    font-size: 39.0625px;
+                    line-height: 46.875px;
+                }
                 span {
-                    display: block;
-                    width: 148px;
+                    display: inline-block;
+                    margin-top: 16px;
+                    font-size: 20px;
+                    line-height: 30px;
+                    font-weight: 500;
+                    color: #52606d;
+                }
+            }
+            .bottom__left {
+                .member__btn {
+                    background-color: $primaryColor;
+                    color: #ffffff;
+                    padding: 12px 16px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    border-radius: 12px;
+                    span {
+                        display: block;
+                        width: 148px;
+                    }
                 }
             }
         }
@@ -110,6 +115,14 @@ $primaryColor: #3164fa;
         .member__card {
             padding: 24px;
             width: 100%;
+            &--top {
+                display: block;
+                margin-bottom: 24px;
+                color: #52606d;
+                span {
+                    margin-left: 8px;
+                }
+            }
         }
     }
 }

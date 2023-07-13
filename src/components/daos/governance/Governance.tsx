@@ -1,4 +1,3 @@
-import { ModalProps } from "~/types/type"
 import "./governance.scss"
 import ModalWalletConnection from "~/components/modal/ModalWalletConnection"
 import { useState } from "react"

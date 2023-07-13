@@ -3,8 +3,8 @@ $primaryColor: #3164fa;
 
 @mixin cardButtonDashboard {
     background-color: #ffffff;
-    width: 619px;
-    max-width: 100%;
+    max-width: 619px;
+    width: 100%;
     border: 1px;
     padding: 49px;
     border: 1px solid #e4e7eb;
@@ -45,16 +45,15 @@ $primaryColor: #3164fa;
 }
 
 .dashboard__container {
-    width: 1520px;
-    max-width: 100%;
+    max-width: 1520px;
+    width: 100%;
     margin: 96px auto 0;
     padding: 24px 129px 0;
     font-family: "Manrope", sans-serif;
-
     .dashboard__banner {
         border: 1px solid #e4e7eb;
-        width: 1261px;
-        max-width: 100%;
+        max-width: 1261px;
+        width: 100%;
         background-color: #ffffff;
         border-radius: 12px;
         box-shadow: rgba(31, 41, 51, 0.04) 0px 4px 8px, rgba(31, 41, 51, 0.06) 0px 0px 2px,
@@ -64,10 +63,8 @@ $primaryColor: #3164fa;
             display: flex;
             justify-content: space-between;
             .banner__content {
-                width: 969px;
-                // height: 195px;
                 .content__title {
-                    font-size: 39.0625px;
+                    font-size: clamp(1.8125rem, 1.6517rem + 0.6859vw, 2.4375rem);
                     font-weight: 700;
                     line-height: 46.875px;
                 }
@@ -78,7 +75,6 @@ $primaryColor: #3164fa;
                     margin-top: 4px;
                 }
                 .content__link {
-                    max-width: 100%;
                     display: inline-flex;
                     align-items: center;
                     column-gap: 12px;
@@ -312,7 +308,7 @@ $primaryColor: #3164fa;
     }
 }
 
-@media screen and (max-width: 1285px) {
+@media screen and (max-width: 80.3125em) {
     .dashboard__container {
         position: unset;
         padding: 24px;
@@ -322,7 +318,7 @@ $primaryColor: #3164fa;
             padding: 24px;
             &--top {
                 .banner__content {
-                    width: 1095px;
+                    max-width: 1095px;
                     .content__title {
                         font-size: 36.9422px;
                         line-height: 44.3307px;
