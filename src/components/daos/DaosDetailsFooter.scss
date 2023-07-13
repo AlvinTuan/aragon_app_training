@@ -9,11 +9,11 @@ $primaryColor: #3164fa;
 }
 
 .footer__dashboard {
-    width: 100%;
     margin-top: 64px;
     background-color: #ffffff;
     .footer__menu {
         width: 1520px;
+        max-width: 100%;
         height: 88px;
         margin: 0 auto;
         display: flex;
@@ -71,7 +71,7 @@ $primaryColor: #3164fa;
     }
 }
 
-@media screen and (max-width: 1385px) {
+@media screen and (max-width: 1285px) {
     .footer__dashboard {
         margin-bottom: 96px;
         width: 100%;

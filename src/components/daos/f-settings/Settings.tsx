@@ -14,6 +14,10 @@ const Settings = () => {
             <div className='settings__container'>
                 <div className="settings__content">
                     <div className="settings__content--top">
+                        <div className="gear">
+                            <i className="fa-solid fa-gear"></i>
+                            <span className="gear-text">Settings</span>
+                        </div>
                         <h2>DAO settings</h2>
                         <span>Review your DAO's settings</span>
                     </div>

@@ -11,7 +11,7 @@
     }
     dd {
         width: 487px;
-        margin-left: 16px;
+        max-width: 100%;
         color: #52606d;
         font-weight: 500;
     }
@@ -19,19 +19,23 @@
 
 .settings__container {
     margin-top: 96px;
-    height: 1501px;
+    min-height: 100vh;
     font-family: "Manrope", sans-serif;
     .settings__content {
         height: 100%;
         width: 1520px;
         margin: 0 auto;
         padding: 40px 129px 0;
+        max-width: 100%;
         &--top {
             background-color: #ffffff;
             box-shadow: rgba(31, 41, 51, 0.04) 0px 4px 8px, rgba(31, 41, 51, 0.06) 0px 0px 2px,
                 rgba(31, 41, 51, 0.04) 0px 0px 1px;
             border-radius: 12px;
             padding: 41px;
+            .gear {
+                display: none;
+            }
             h2 {
                 color: #323f4b;
                 font-size: 39.0625px;
@@ -48,6 +52,7 @@
         }
         &--bottom {
             width: 744px;
+            max-width: calc(100% - 258px);
             height: calc(100% - 246px);
             margin: 32px auto 0;
             padding-top: 64px;
@@ -55,7 +60,6 @@
                 background-color: #ffffff;
                 border-radius: 12px;
                 width: 100%;
-                height: 166px;
                 padding: 24px;
                 h1 {
                     width: 106px;
@@ -216,6 +220,99 @@
                     font-weight: 700;
                     line-height: 19.2px;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 80.3125em) {
+    .settings__container {
+        margin-top: 0;
+        padding: 24px;
+        .settings__content {
+            padding: 0;
+            &--top {
+                .gear {
+                    margin-bottom: 24px;
+                    color: #52606d;
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    column-gap: 8px;
+                    .gear-text {
+                        font-weight: 500;
+                        margin: 0;
+                        line-height: 24px;
+                    }
+                }
+                h2 {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 63.4375em) {
+    .settings__container .settings__content {
+        &--bottom {
+            .net-block {
+                .table__def {
+                    .def_net {
+                        display: block;
+                    }
+                    .def_blockchain {
+                        display: block;
+                    }
+                }
+            }
+            .DAO-details {
+                dl {
+                    .details--logo {
+                        display: block;
+                    }
+                    .details--name {
+                        display: block;
+                    }
+                    .details--ens {
+                        display: block;
+                    }
+                    .details--links {
+                        display: block;
+                    }
+                }
+            }
+            .section__community {
+                dl {
+                    .eligible-voters {
+                        display: block;
+                    }
+                    .members {
+                        display: block;
+                    }
+                }
+            }
+            .section__governance {
+                dl {
+                    .minimum-approval {
+                        display: block;
+                    }
+                    .proposal-creation {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 49.6875em) {
+    .settings__container {
+        .settings__content {
+            &--bottom {
+                max-width: 100%;
+                margin: 0;
+                width: 100%;
             }
         }
     }

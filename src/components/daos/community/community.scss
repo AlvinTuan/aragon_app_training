@@ -3,6 +3,7 @@ $primaryColor: #3164fa;
 
 .community__container {
     height: 948px;
+    width: 100%;
     margin-top: 96px;
     padding: 40px 129px 64px;
     font-family: "Manrope", sans-serif;
@@ -11,7 +12,7 @@ $primaryColor: #3164fa;
         background-color: #ffffff;
         border-radius: 12px;
         width: 1259px;
-        height: 173px;
+        max-width: 100%;
         padding: 41px;
         display: flex;
         justify-content: space-between;
@@ -41,15 +42,21 @@ $primaryColor: #3164fa;
                 font-weight: 500;
                 line-height: 24px;
                 border-radius: 12px;
+                span {
+                    display: block;
+                    width: 148px;
+                }
             }
         }
     }
     .community__bottom {
         padding: 36px 0 64px;
         width: 1003px;
+        max-width: 100%;
         margin: 0 auto;
         &--search {
             height: 56px;
+            width: 100%;
             background-color: #ffffff;
             display: flex;
             align-items: center;
@@ -91,6 +98,31 @@ $primaryColor: #3164fa;
                 .icon--share {
                     color: $hoverColor;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 80.3125em) {
+    .community__container {
+        margin-top: 24px;
+        padding: 0 24px;
+        .member__card {
+            padding: 24px;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 49.6875em) {
+    .community__container {
+        .member__card {
+            flex-direction: column;
+            row-gap: 16px;
+            &--left .member__btn {
+                display: flex;
+                justify-content: center;
+                width: 100%;
             }
         }
     }

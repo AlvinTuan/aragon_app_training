@@ -1,5 +1,6 @@
 import ModalDepositFunds from "~/components/modal/ModalDepositFunds"
 import "../governance/governance.scss"
+import "./finance.scss"
 import { useState } from "react"
 import { ToastContainer } from "react-toastify"
 const Finance = () => {
@@ -8,6 +9,28 @@ const Finance = () => {
         <>
             <ModalDepositFunds open={showModalDepositFunds} handleClose={() => setShowModalDepositFunds(false)}></ModalDepositFunds>
             <div className='ele__container'>
+                <div className="ele__finance--box">
+                    <div className="box__top">
+                        <div className="icon-finance">
+                            <i className="fa-solid fa-coins"></i>
+                        </div>
+                        <span>Finance</span>
+                    </div>
+                    <div className="box__bottom">
+                        <div className="finance">
+                            <h1>$0.00</h1>
+                            <div className="finance_child">
+                                <span className="hours">24h</span>
+                                <p className="add_money">+$0.00</p>
+                            </div>
+                        </div>
+                        <button className="box__btn">
+                            <i className="fa-solid fa-plus"></i>
+                            <span>New transfer</span>
+                        </button>
+                    </div>
+                </div>
+
                 <div className="ele__card">
                     <div className="card__img">
                     </div>

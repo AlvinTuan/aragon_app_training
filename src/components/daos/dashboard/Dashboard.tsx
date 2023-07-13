@@ -76,7 +76,9 @@ const Dashboard = () => {
                                 <span>
                                     {`app.aragon.org/#/daos/ethereum/${exploreListItem?.author}`}
                                 </span>
-                                <i className="fa-regular fa-copy"></i>
+                                <div className="icon-copy">
+                                    <i className="fa-regular fa-copy"></i>
+                                </div>
                             </a>
                             <div className="content__description" onClick={handleClickReadMore}>
                                 <p className={`${showPara ? "show-para" : ""}`}>

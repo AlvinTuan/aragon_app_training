@@ -14,7 +14,7 @@ const Governance = () => {
                     <div className="card__img">
                     </div>
                     <h2 className="card__title">Create your first proposal</h2>
-                    <p className="card__desc">Get your community involved in the decision-making process. Learn more in our <a href="">proposal guide</a>.</p>
+                    <p className="card__desc">What's the first thing your community needs to decide? For ideas on how to structure proposals, <a href="">read this guide</a>.</p>
                     <button className="card__btn" onClick={() => setShowModalWalletConnection(true)}>
                         <span>
                             New proposal

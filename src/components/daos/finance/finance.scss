@@ -1,0 +1,83 @@
+.ele__container {
+    .ele__finance--box {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 80.3125em) {
+    .ele__container {
+        .ele__finance--box {
+            display: block;
+            border-radius: 12px;
+            width: 100%;
+            margin-bottom: 56px;
+            background-color: #fff;
+            padding: 26px 17px;
+            .box__top {
+                display: flex;
+                align-self: center;
+                column-gap: 8px;
+                color: #52606d;
+            }
+            .box__bottom {
+                margin-top: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .finance {
+                    h1 {
+                        color: #323f4b;
+                        font-size: 36.9422px;
+                        font-weight: 700;
+                        line-height: 44.3307px;
+                        text-transform: capitalize;
+                    }
+                    &_child {
+                        margin-top: 8px;
+                        display: flex;
+                        column-gap: 12px;
+                        color: #52606d;
+                        align-items: center;
+                        .hours {
+                            background-color: #e4e7eb;
+                            font-size: 12.5605px;
+                            font-weight: 700;
+                            line-height: 18.8407px;
+                            height: 23px;
+                            padding: 2px;
+                        }
+                        .add_money {
+                            font-size: 19.3237px;
+                            font-weight: 500;
+                            line-height: 28.9855px;
+                        }
+                    }
+                }
+                .box__btn {
+                    padding: 12px 16px;
+                    background-color: #003bf5;
+                    color: #ffffff;
+                    font-size: 15.5773px;
+                    font-weight: 700;
+                    line-height: 23.366px;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    column-gap: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 49.6875em) {
+    .ele__container .ele__finance--box .box__bottom {
+        flex-direction: column;
+        align-items: start;
+        row-gap: 16px;
+        .box__btn {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}

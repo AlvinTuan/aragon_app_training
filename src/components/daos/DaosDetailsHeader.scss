@@ -117,39 +117,133 @@
     }
 }
 
-@media screen and (max-width: 1385px) {
+@media screen and (max-width: 80.3125em) {
     .dao__header {
-        top: unset;
+        display: none;
+    }
+    .dao__ltePC {
+        width: 1833px;
+        max-width: 100%;
+        height: 96px;
+        position: fixed;
         bottom: 0;
-        .dao__top {
-            padding: 12px 24px;
-            max-width: calc(100vw - 48px);
-            .btn__menu .openNav {
-                display: block;
-                width: 100px;
-                height: 50px;
-                background-color: #8b9aa8;
-                padding: 10px;
+        right: 0;
+        display: flex;
+        padding: 12px 24px;
+        align-items: center;
+        justify-content: space-between;
+        background: linear-gradient(rgb(245, 247, 250) 0%, rgba(245, 247, 250, 0) 100%);
+        backdrop-filter: blur(24px);
+        font-family: "Manrope", sans-serif;
+        .menu {
+            height: 48px;
+            background-color: #fff;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            border-radius: 12px;
+            .strike-span {
+                span:nth-child(1) {
+                    display: block;
+                    width: 20px;
+                    height: 2px;
+                    background-color: #000;
+                }
+                span:nth-child(2) {
+                    margin-top: 5px;
+                    display: block;
+                    width: 12px;
+                    height: 2px;
+                    background-color: #000;
+                }
+            }
+            .menu-text {
+                color: #323f4b;
+                font-size: 16.2944px;
+                font-weight: 700;
+                line-height: 22.9416px;
+            }
+            &:hover {
+                background-color: #d0d0d0;
+            }
+        }
+        .user {
+            width: 405px;
+            max-width: 100%;
+            .menu__user {
                 display: flex;
-                align-self: center;
-                .brick {
-                    span:nth-child(1) {
-                        display: block;
-                        width: 20px;
-                        height: 3px;
-                        background-color: #000;
-                        margin-bottom: 3px;
-                    }
-                    span:nth-child(2) {
-                        display: block;
-                        width: 15px;
-                        height: 3px;
-                        background-color: #000;
+                align-items: center;
+                flex-direction: column;
+                row-gap: 4px;
+                cursor: pointer;
+                &--author {
+                    background: linear-gradient(to right, #003bf5, #002985);
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #ffffff;
+                    border-radius: 50%;
+                }
+                &--title {
+                    font-size: 12.8px;
+                    font-weight: 700;
+                    line-height: 19.2px;
+                    color: #323f4b;
+                }
+            }
+        }
+        .header-btn {
+            .btn-connect-wallet {
+                display: flex;
+                align-items: center;
+                column-gap: 12px;
+                background-color: #ffffff;
+                padding: 12px 16px;
+                border-radius: 12px;
+                span {
+                    color: #52606d;
+                    font-weight: 700;
+                    line-height: 24px;
+                    text-align: center;
+                }
+                &:hover {
+                    background-color: #e4e7eb;
+                    span {
+                        color: #323f4b;
                     }
                 }
             }
-            &--left {
-                flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: 49.6875em) {
+    .dao__ltePC {
+        .menu {
+            .menu-text {
+                display: none;
+            }
+        }
+        .user {
+            .menu__user {
+                &--title {
+                    display: none;
+                }
+            }
+        }
+        .header-btn {
+            .btn-connect-wallet {
+                // padding: 4px 6px;
+                span {
+                    display: none;
+                }
+                .fa-user {
+                    width: 16px;
+                    height: 16px;
+                }
             }
         }
     }
