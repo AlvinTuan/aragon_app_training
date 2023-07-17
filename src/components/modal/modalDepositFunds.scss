@@ -1,4 +1,4 @@
-@import "../../../colorMain.scss";
+@import "../../assets/variable";
 
 @mixin bottom_head_desc {
     h2 {
@@ -26,9 +26,10 @@
     .overlay {
         position: absolute;
         inset: 0;
-        background-color: rgba(0, 0, 0, 0.85);
+        background: linear-gradient(167.96deg, rgba(31, 41, 51, 0.24) 0%, rgb(31, 41, 51) 100%);
+        backdrop-filter: blur(24px);
     }
-    .modal__content {
+    .modal__deposit_funds {
         position: relative;
         z-index: 10;
         width: 100%;
@@ -36,108 +37,118 @@
         border-radius: 12px;
         width: 482px;
         max-height: 500px;
-    }
-    .modal__title {
-        .modal__title--left {
-            span {
-                font-size: 14px;
-                color: #bfbebe;
-            }
-        }
-    }
-    .deposit-funds__bottom {
-        padding: 24px;
-        .section__blockchain {
-            @include bottom_head_desc();
-            .ethereum__btn {
-                margin-top: 12px;
-                padding: 18px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                background-color: #ebebeb;
-                width: 100%;
-                height: 48px;
-                border-radius: 12px;
-                .logo {
-                    display: flex;
-                    column-gap: 8px;
-                }
-                .connect-btn {
-                    font-weight: 600;
-                    color: #003bf5;
-                }
-            }
-        }
-        .section__dao-treasury {
-            margin-top: 30px;
-            @include bottom_head_desc();
-            .dao-treasury__btn {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                background-color: #ebebeb;
-                margin-top: 16px;
-                height: 48px;
-                padding: 8px;
-                border: 2px solid #bfbebe;
-                border-radius: 12px;
-                .info {
-                    font-weight: normal;
-                    color: #575353;
-                }
-                .btn__list {
-                    display: flex;
-                    column-gap: 6px;
-                    &--toggle {
-                        max-width: 45px;
-                        border-radius: 8px;
-                        padding: 6px 10px;
-                        background-color: #fff;
-                        span {
-                            color: #000;
-                            font-size: 14px;
-                        }
-                        &:hover {
-                            background-color: #ebebeb;
-                        }
-                    }
-                    &--copy,
-                    &--share {
-                        width: 32px;
-                        height: 32px;
-                        border-radius: 8px;
-                        background-color: #fff;
-                        &:hover {
-                            background-color: #ebebeb;
-                        }
-                    }
-                }
-            }
-        }
-        .bottom__list--btn {
-            margin-top: 30px;
+
+        .modal__title {
+            background-color: white;
             display: flex;
             align-items: center;
-            column-gap: 12px;
-            .btn-view-all {
-                width: 165px;
-                border-radius: 12px;
-                background-color: #003bf5;
-                color: #fff;
-                padding: 12px 16px;
-                font-weight: bold;
+            justify-content: space-between;
+            border-bottom: 1px solid #d7d6d6;
+            height: 80px;
+            padding: 0 24px;
+            border-radius: 12px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            .modal__title--left {
+                span {
+                    font-size: 14px;
+                    color: #bfbebe;
+                }
             }
-            .btn-cancel {
-                width: 86px;
-                background-color: #eeeeee;
-                border-radius: 8px;
-                padding: 12px 16px;
-                color: #575353;
-                font-weight: bold;
+        }
+        .deposit-funds__bottom {
+            padding: 24px;
+            .section__blockchain {
+                @include bottom_head_desc();
+                .ethereum__btn {
+                    margin-top: 12px;
+                    padding: 18px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: #ebebeb;
+                    width: 100%;
+                    height: 48px;
+                    border-radius: 12px;
+                    .logo {
+                        display: flex;
+                        column-gap: 8px;
+                    }
+                    .connect-btn {
+                        font-weight: 600;
+                        color: #003bf5;
+                    }
+                }
+            }
+            .section__dao-treasury {
+                margin-top: 30px;
+                @include bottom_head_desc();
+                .dao-treasury__btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: #ebebeb;
+                    margin-top: 16px;
+                    height: 48px;
+                    padding: 8px;
+                    border: 2px solid #bfbebe;
+                    border-radius: 12px;
+                    .info {
+                        font-weight: normal;
+                        color: #575353;
+                    }
+                    .btn__list {
+                        display: flex;
+                        column-gap: 6px;
+                        &--toggle {
+                            max-width: 45px;
+                            border-radius: 8px;
+                            padding: 6px 10px;
+                            background-color: #fff;
+                            span {
+                                color: #000;
+                                font-size: 14px;
+                            }
+                            &:hover {
+                                background-color: #ebebeb;
+                            }
+                        }
+                        &--copy,
+                        &--share {
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 8px;
+                            background-color: #fff;
+                            &:hover {
+                                background-color: #ebebeb;
+                            }
+                        }
+                    }
+                }
+            }
+            .bottom__list--btn {
+                margin-top: 30px;
+                display: flex;
+                align-items: center;
+                column-gap: 12px;
+                .btn-view-all {
+                    width: 165px;
+                    border-radius: 12px;
+                    background-color: #003bf5;
+                    color: #fff;
+                    padding: 12px 16px;
+                    font-weight: bold;
+                }
+                .btn-cancel {
+                    width: 86px;
+                    background-color: #eeeeee;
+                    border-radius: 8px;
+                    padding: 12px 16px;
+                    color: #575353;
+                    font-weight: bold;
 
-                &:hover {
-                    background-color: #e4e7eb;
+                    &:hover {
+                        background-color: #e4e7eb;
+                    }
                 }
             }
         }

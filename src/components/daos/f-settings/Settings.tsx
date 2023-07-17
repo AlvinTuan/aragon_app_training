@@ -1,8 +1,11 @@
 import useFetch from "~/hooks/useFetch"
-import "./settings.scss"
 import { useParams } from "react-router-dom"
 import { useState } from "react"
 import ModalWalletConnection from "~/components/modal/ModalWalletConnection"
+import styles from "./settings.module.scss"
+import classNames from "classnames/bind"
+
+const cx = classNames.bind(styles)
 
 const Settings = () => {
     const param = useParams()
@@ -11,51 +14,51 @@ const Settings = () => {
     return (
         <>
             <ModalWalletConnection open={showModalWalletConnection} handleClose={() => { setShowModalWalletConnection(false) }}></ModalWalletConnection>
-            <div className='settings__container'>
-                <div className="settings__content">
-                    <div className="settings__content--top">
-                        <div className="gear">
+            <div className={cx('container')}>
+                <div className={cx("content")}>
+                    <div className={cx("content--top")}>
+                        <div className={cx("gear")}>
                             <i className="fa-solid fa-gear"></i>
-                            <span className="gear-text">Settings</span>
+                            <span className={cx("gear-text")}>Settings</span>
                         </div>
                         <h2>DAO settings</h2>
                         <span>Review your DAO's settings</span>
                     </div>
-                    <div className="settings__content--bottom">
-                        <div className="net-block">
+                    <div className={cx("content--bottom")}>
+                        <div className={cx("net-block")}>
                             <h1>Blockchain</h1>
                             <span>Not changeable</span>
-                            <dl className="table__def">
-                                <dl className="def_net">
+                            <dl className={cx("table__def")}>
+                                <dl className={cx("def_net")}>
                                     <dt>Network</dt>
                                     <dd>Mainnet</dd>
                                 </dl>
-                                <dl className="def_blockchain">
+                                <dl className={cx("def_blockchain")}>
                                     <dt>Blockchain</dt>
                                     <dd>Ethereum</dd>
                                 </dl>
                             </dl>
                         </div>
-                        <div className="DAO-details">
+                        <div className={cx("DAO-details")}>
                             <h1>
                                 <span>DAO details</span>
                             </h1>
                             <dl>
-                                <dl className="details--logo">
+                                <dl className={cx("details--logo")}>
                                     <dt>Logo</dt>
                                     <dd>
-                                        <p className="details--author">{exploreDaosItem?.avatar}</p>
+                                        <p className={cx("details--author")}>{exploreDaosItem?.avatar}</p>
                                     </dd>
                                 </dl>
-                                <dl className="details--name">
+                                <dl className={cx("details--name")}>
                                     <dt>DAO name</dt>
                                     <dd>{exploreDaosItem?.author}</dd>
                                 </dl>
-                                <dl className="details--ens">
+                                <dl className={cx("details--ens")}>
                                     <dt>ENS</dt>
                                     <dd>{exploreDaosItem?.desc}</dd>
                                 </dl>
-                                <dl className="details--links">
+                                <dl className={cx("details--links")}>
                                     <dt>Links</dt>
                                     <dd>
                                         <a href="">We Have Had Enough web
@@ -65,38 +68,38 @@ const Settings = () => {
                                 </dl>
                             </dl>
                         </div>
-                        <div className="section__community">
+                        <div className={cx("section__community")}>
                             <h1>Community</h1>
                             <dl>
-                                <dl className="eligible-voters">
+                                <dl className={cx("eligible-voters")}>
                                     <dt>Eligible voters</dt>
                                     <dd>Multisig members</dd>
                                 </dl>
-                                <dl className="members">
+                                <dl className={cx("members")}>
                                     <dt>Members</dt>
                                     <dd>
                                         <a href={`/daos/ethereum/${exploreDaosItem?.author}/community`}>See 1 addresses</a></dd>
                                 </dl>
                             </dl>
                         </div>
-                        <div className="section__governance">
+                        <div className={cx("section__governance")}>
                             <h1>Governance</h1>
                             <dl>
-                                <dl className="minimum-approval">
+                                <dl className={cx("minimum-approval")}>
                                     <dt>Minimum approval</dt>
                                     <dd>1 of 1 Authorized wallets / addresses</dd>
                                 </dl>
-                                <dl className="proposal-creation">
+                                <dl className={cx("proposal-creation")}>
                                     <dt>Proposal creation</dt>
                                     <dd>Multisig members</dd>
                                 </dl>
                             </dl>
                         </div>
-                        <button className="btn-edit" onClick={() => { setShowModalWalletConnection(true) }}>
+                        <button className={cx("btn-edit")} onClick={() => { setShowModalWalletConnection(true) }}>
                             <span><i className="fa-solid fa-box"></i></span>
                             <span>Edit settings</span>
                         </button>
-                        <div className="settings__note">
+                        <div className={cx("note")}>
                             <i className="fa-solid fa-circle-info"></i>
                             <span>To make changes to the settings, create a proposal and put it to vote in your DAO.</span>
                         </div>

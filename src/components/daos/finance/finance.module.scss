@@ -1,12 +1,75 @@
-.ele__container {
-    .ele__finance--box {
+@import "../../../assets/variable";
+
+.container {
+    .finance__box {
         display: none;
+    }
+    min-height: 100vh;
+    margin-top: 96px;
+    .card {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1003px;
+        background-color: #fff;
+        padding: 96px 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-radius: 12px;
+        .card__img {
+            width: 400px;
+            height: 225px;
+            background: linear-gradient(19deg, rgba(49, 100, 250, 1) 30%, rgba(125, 175, 205, 1) 77%);
+        }
+        .card__title {
+            margin-top: 32px;
+            font-size: clamp(1.5773rem, 1.4806rem + 0.4124vw, 1.953125rem);
+            color: #323f4b;
+            font-weight: 700;
+            line-height: 37.5px;
+        }
+        .card__desc {
+            margin-top: 12px;
+            font-size: clamp(1.05904375rem, 1.0099rem + 0.2096vw, 1.25rem);
+            color: #616e7c;
+            font-weight: 500;
+            line-height: 30px;
+            text-align: center;
+            width: 65%;
+            a {
+                text-decoration: none;
+                color: $primaryColor;
+            }
+        }
+        .card__btn {
+            padding: 12px 16px;
+            margin-top: 32px;
+            background-color: $primaryColor;
+            color: #ffffff;
+            font-weight: 700;
+            line-height: 24px;
+            border-radius: 12px;
+            .Toastify {
+                .Toastify__toast-container {
+                    width: auto;
+                    .Toastify__close-button {
+                        display: none;
+                    }
+                }
+                .Toastify__toast-icon svg {
+                    fill: #52606d;
+                }
+            }
+        }
     }
 }
 
-@media screen and (max-width: 80.3125em) {
-    .ele__container {
-        .ele__finance--box {
+@media screen and (max-width: 1023.98px) {
+    .container {
+        margin-top: 40px;
+        padding: 0 24px;
+        .finance__box {
             display: block;
             border-radius: 12px;
             width: 100%;
@@ -70,8 +133,8 @@
     }
 }
 
-@media screen and (max-width: 49.6875em) {
-    .ele__container .ele__finance--box .box__bottom {
+@media screen and (max-width: 767.98px) {
+    .container .finance--box .box__bottom {
         flex-direction: column;
         align-items: start;
         row-gap: 16px;

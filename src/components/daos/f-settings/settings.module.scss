@@ -1,4 +1,4 @@
-@import "../../../../colorMain.scss";
+@import "../../../assets/variable";
 
 @mixin dt_dd {
     display: flex;
@@ -17,11 +17,11 @@
     }
 }
 
-.settings__container {
+.container {
     margin-top: 96px;
     min-height: 100vh;
     font-family: "Manrope", sans-serif;
-    .settings__content {
+    .content {
         height: 100%;
         width: 1520px;
         margin: 0 auto;
@@ -206,7 +206,7 @@
                     line-height: 24px;
                 }
             }
-            .settings__note {
+            .note {
                 margin-top: 16px;
                 display: flex;
                 align-items: center;
@@ -226,10 +226,10 @@
 }
 
 @media screen and (max-width: 80.3125em) {
-    .settings__container {
+    .container {
         margin-top: 0;
         padding: 24px;
-        .settings__content {
+        .content {
             padding: 0;
             &--top {
                 .gear {
@@ -254,7 +254,7 @@
 }
 
 @media screen and (max-width: 63.4375em) {
-    .settings__container .settings__content {
+    .container .content {
         &--bottom {
             .net-block {
                 .table__def {
@@ -307,8 +307,8 @@
 }
 
 @media screen and (max-width: 49.6875em) {
-    .settings__container {
-        .settings__content {
+    .container {
+        .content {
             &--bottom {
                 max-width: 100%;
                 margin: 0;

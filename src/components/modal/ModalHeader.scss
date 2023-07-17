@@ -9,11 +9,14 @@
     opacity: 0;
     font-family: "Manrope", sans-serif;
     transition: opacity linear 0.3s;
+
     .overlay {
         position: absolute;
         inset: 0;
-        background-color: rgba(0, 0, 0, 0.85);
+        background: linear-gradient(167.96deg, rgba(31, 41, 51, 0.24) 0%, rgb(31, 41, 51) 100%);
+        backdrop-filter: blur(24px);
     }
+
     .header__modal--content::before {
         content: "";
         display: block;

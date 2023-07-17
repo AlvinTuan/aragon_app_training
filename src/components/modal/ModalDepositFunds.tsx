@@ -7,6 +7,7 @@ import { useState } from "react";
 import { ModalProps } from "~/types/type";
 import ModalWalletConnection from "./ModalWalletConnection";
 
+
 const ModalDepositFunds = ({ open, handleClose }: ModalProps) => {
     const param = useParams()
     const [toggleText, setToggleText] = useState(false)

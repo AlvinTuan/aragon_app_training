@@ -1,35 +1,31 @@
-.dao__header {
-    width: 1833px;
-    max-width: 100%;
+.header-details {
+    width: 100%;
     height: 96px;
     background: linear-gradient(rgb(245, 247, 250) 0%, rgba(245, 247, 250, 0) 100%);
     backdrop-filter: blur(24px);
-    font-family: "Manrope", sans-serif;
     position: fixed;
     top: 0;
-    .dao__top {
-        width: 1680px;
+    .header-container {
+        width: 100%;
+        max-width: 1680px;
         height: 100%;
         margin: 0 auto;
-        padding: 24px 80px;
-        max-width: calc(100vw - 160px);
         display: flex;
         align-items: center;
         justify-content: space-between;
-        .btn__menu {
+        .header-menu {
             display: none;
         }
-        &--left {
+        .header--left {
             display: flex;
             align-items: center;
             column-gap: 48px;
-            .menu__user {
-                width: 196px;
+            .header__user {
                 display: flex;
-                column-gap: 12px;
                 align-items: center;
+                column-gap: 12px;
                 cursor: pointer;
-                &--author {
+                .user__avatar {
                     background: linear-gradient(to right, #003bf5, #002985);
                     width: 48px;
                     height: 48px;
@@ -39,7 +35,7 @@
                     color: #ffffff;
                     border-radius: 50%;
                 }
-                &--title {
+                .user__title {
                     font-weight: 700;
                     max-width: 88px;
                     height: 24px;
@@ -88,9 +84,8 @@
                 }
             }
         }
-        &--right {
+        .header--right {
             display: flex;
-            align-self: center;
             column-gap: 16px;
             .btn-give-feedback,
             .btn-connect-wallet {
@@ -117,11 +112,15 @@
     }
 }
 
-@media screen and (max-width: 80.3125em) {
-    .dao__header {
+.header-ltePC {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .header-details {
         display: none;
     }
-    .dao__ltePC {
+    .header-ltePC {
         width: 1833px;
         max-width: 100%;
         height: 96px;
@@ -220,8 +219,8 @@
     }
 }
 
-@media screen and (max-width: 49.6875em) {
-    .dao__ltePC {
+@media screen and (max-width: 767.98px) {
+    .header-ltePC {
         .menu {
             .menu-text {
                 display: none;
@@ -249,6 +248,14 @@
     }
 }
 
-// Mobie: width < 740
-// tablet: width >= 740 and width < 1024
-// pc: width >= 1024
+.Toastify {
+    .Toastify__toast-container {
+        width: auto;
+        .Toastify__close-button {
+            display: none;
+        }
+    }
+    .Toastify__toast-icon svg {
+        fill: #52606d;
+    }
+}

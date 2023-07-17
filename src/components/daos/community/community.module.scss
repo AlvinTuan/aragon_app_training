@@ -1,7 +1,6 @@
-$hoverColor: #0031ad;
-$primaryColor: #3164fa;
+@import "../../../assets/variable";
 
-.community__container {
+.container {
     height: 948px;
     width: 100%;
     margin-top: 96px;
@@ -54,7 +53,7 @@ $primaryColor: #3164fa;
             }
         }
     }
-    .community__bottom {
+    .bottom {
         padding: 36px 0 64px;
         width: 1003px;
         max-width: 100%;
@@ -83,7 +82,7 @@ $primaryColor: #3164fa;
                 border: 2px solid #646a70;
             }
         }
-        .community__bottom--address {
+        .bottom--address {
             margin-top: 20px;
             background-color: #ffffff;
             padding: 24px;
@@ -109,7 +108,7 @@ $primaryColor: #3164fa;
 }
 
 @media screen and (max-width: 80.3125em) {
-    .community__container {
+    .container {
         margin-top: 24px;
         padding: 0 24px;
         .member__card {
@@ -128,7 +127,7 @@ $primaryColor: #3164fa;
 }
 
 @media screen and (max-width: 49.6875em) {
-    .community__container {
+    .container {
         .member__card {
             flex-direction: column;
             row-gap: 16px;

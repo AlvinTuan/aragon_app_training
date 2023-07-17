@@ -1,20 +1,19 @@
-$hoverColor: #0031ad;
-$primaryColor: #3164fa;
-
-.ele__container {
+@import "../../../assets/variable";
+.container {
     padding: 40px 0;
-    font-family: "Manrope", sans-serif;
     min-height: 100vh;
-    .ele__card {
+    margin-top: 96px;
+    .card {
         margin: 0 auto;
-        width: 1003px;
+        width: 100%;
+        max-width: 1003px;
         background-color: #fff;
-        padding: 96px 275px;
+        padding: 96px 48px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        border-radius: 12px;
         text-align: center;
+        border-radius: 12px;
         .card__img {
             width: 400px;
             height: 225px;
@@ -22,18 +21,19 @@ $primaryColor: #3164fa;
         }
         .card__title {
             margin-top: 32px;
+            font-size: clamp(1.5773rem, 1.4806rem + 0.4124vw, 1.953125rem);
             color: #323f4b;
-            font-size: 31.25px;
             font-weight: 700;
             line-height: 37.5px;
         }
         .card__desc {
+            margin-top: 12px;
+            font-size: clamp(1.05904375rem, 1.0099rem + 0.2096vw, 1.25rem);
             color: #616e7c;
-            font-size: 20px;
             font-weight: 500;
             line-height: 30px;
-            margin-top: 12px;
             text-align: center;
+            width: 65%;
             a {
                 text-decoration: none;
                 color: $primaryColor;
@@ -62,24 +62,24 @@ $primaryColor: #3164fa;
     }
 }
 
-@media screen and (max-width: 80.3125em) {
-    .ele__container {
+@media screen and (max-width: 1023.98px) {
+    .container {
         margin-top: 0;
         width: 100%;
         padding: 40px 24px;
-        .ele__card {
+        .card {
             margin: unset;
             width: 100%;
         }
     }
 }
 
-@media screen and (max-width: 49.6875em) {
-    .ele__container {
+@media screen and (max-width: 767.98px) {
+    .container {
         margin-top: 0;
         width: 100%;
         padding: 23px 15px;
-        .ele__card {
+        .card {
             margin: unset;
             width: 100%;
             padding: 32px 24px;

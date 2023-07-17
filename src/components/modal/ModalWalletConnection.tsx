@@ -1,4 +1,4 @@
-import "./modalModalWalletConnection.scss"
+import "./modalWalletConnection.scss"
 import ReactDOM from "react-dom"
 
 interface ModalProps {

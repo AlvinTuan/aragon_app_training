@@ -1,43 +1,46 @@
 import ModalDepositFunds from "~/components/modal/ModalDepositFunds"
-import "../governance/governance.scss"
-import "./finance.scss"
 import { useState } from "react"
 import { ToastContainer } from "react-toastify"
+import styles from "./finance.module.scss"
+import classNames from "classnames/bind"
+
+const cx = classNames.bind(styles)
+
 const Finance = () => {
     const [showModalDepositFunds, setShowModalDepositFunds] = useState(false)
     return (
         <>
             <ModalDepositFunds open={showModalDepositFunds} handleClose={() => setShowModalDepositFunds(false)}></ModalDepositFunds>
-            <div className='ele__container'>
-                <div className="ele__finance--box">
-                    <div className="box__top">
-                        <div className="box__top--icon">
-                            <i className="fa-solid fa-coins"></i>
+            <div className={cx('container')}>
+                <div className={cx("finance__box")}>
+                    <div className={cx("box__top")}>
+                        <div className={cx("box__top--icon")}>
+                            <i className={cx("fa-solid fa-coins")}></i>
                         </div>
-                        <span className="box__top--text">Finance</span>
+                        <span className={cx("box__top--text")}>Finance</span>
                     </div>
-                    <div className="box__bottom">
-                        <div className="finance">
+                    <div className={cx("box__bottom")}>
+                        <div className={cx("finance")}>
                             <h1>$0.00</h1>
-                            <div className="finance_child">
-                                <span className="hours">24h</span>
-                                <p className="add_money">+$0.00</p>
+                            <div className={cx("finance_child")}>
+                                <span className={cx("hours")}>24h</span>
+                                <p className={cx("add_money")}>+$0.00</p>
                             </div>
                         </div>
-                        <button className="box__btn">
+                        <button className={cx("box__btn")}>
                             <i className="fa-solid fa-plus"></i>
                             <span>New transfer</span>
                         </button>
                     </div>
                 </div>
 
-                <div className="ele__card">
-                    <div className="card__img">
+                <div className={cx("card")}>
+                    <div className={cx("card__img")}>
                     </div>
-                    <h2 className="card__title">Make your first deposit
+                    <h2 className={cx("card__title")}>Make your first deposit
                     </h2>
-                    <p className="card__desc">Begin by making your first treasury deposit. Learn more about managing a DAO treasury <a href="">in this guide</a>.</p>
-                    <button className="card__btn" onClick={() => setShowModalDepositFunds(true)}>
+                    <p className={cx("card__desc")}>Begin by making your first treasury deposit. Learn more about managing a DAO treasury <a href="">in this guide</a>.</p>
+                    <button className={cx("card__btn")} onClick={() => setShowModalDepositFunds(true)}>
                         <span>
                             Deposit funds
                         </span>
